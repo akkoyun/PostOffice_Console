@@ -23,6 +23,16 @@ try {
     die($ex->getMessage());
 }
 
-$baglanti = null;
+//$baglanti = null;
 
+
+$sorgu = $baglanti->query("SELECT * FROM Module");
+$cikti = $sorgu->fetch(PDO::FETCH_ASSOC);
+
+echo "Device ID : " .
+    $cikti["Device_ID"] .
+    "<br /> Last Online Time : " .
+    $cikti["Last_Online_Time"] .
+    "<br /> Device Note : " .
+    $cikti["Module_Name"];
 ?>
