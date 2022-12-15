@@ -32,9 +32,10 @@ $cikti = $sorgu->fetchAll(PDO::FETCH_ASSOC);
 foreach ($cikti as $DB) {
 
 	echo "-> ";
-	echo $cikti["Device_ID"];
+	echo $DB["Device_ID"];
 	echo " - ";
-	echo $cikti["Last_Online_Time"];
+	echo $DB["Last_Online_Time"];
+	echo "<br>";
 
 }
 
