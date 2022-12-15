@@ -10,7 +10,7 @@ $baglanti_cumlesi = sprintf(
     "pgsql:host=%s port=%s dbname=%s user=%s password=%s",
     "localhost",
     "5432",
-    "postoffice",
+    "PostOffice",
     "postgres",
     "00204063f4b4!NN"
 );
