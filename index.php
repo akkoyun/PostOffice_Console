@@ -26,10 +26,10 @@ try {
 
 echo "Device List<br />";
 
-$sorgu = $baglanti->query("SELECT * FROM \"Module\"");
-$cikti = $sorgu->fetch(PDO::FETCH_ASSOC);
+//$sorgu = $baglanti->query("SELECT * FROM \"Module\"");
+//$cikti = $sorgu->fetch(PDO::FETCH_ASSOC);
 
-foreach ($cikti as $row) 
+foreach ($connec->query("SELECT * FROM \"Module\"") as $row) 
 {
 	echo "-> " .
     $row["Device_ID"] .
