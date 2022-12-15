@@ -34,8 +34,9 @@ foreach ($cikti as $DB) {
 	echo "-> ";
 	echo $DB["Device_ID"];
 	echo " - ";
-
 	echo date("Y-m-d H:i:s", strtotime($DB["Last_Online_Time"]));
+	echo " - ";
+	echo $DB["Data_Count"];
 
 	echo "<br>";
 
