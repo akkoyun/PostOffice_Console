@@ -26,7 +26,7 @@ try {
 
 echo "Device List<br />";
 
-$sorgu = $baglanti->query("SELECT * FROM \"Module\"");
+$sorgu = $baglanti->query("SELECT * FROM \"Module\" ORDER BY \"Last_Online_Time\" DESC");
 $cikti = $sorgu->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($cikti as $DB) {
