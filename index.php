@@ -24,15 +24,13 @@ try {
 
 //$baglanti = null;
 
-echo "Device List";
+echo "Device List<br />";
 
 $sorgu = $baglanti->query("SELECT * FROM \"Module\"");
 $cikti = $sorgu->fetch(PDO::FETCH_ASSOC);
 
-echo "Device ID : " .
+echo "-> " .
     $cikti["Device_ID"] .
-    "<br /> Last Online Time : " .
-    $cikti["Last_Online_Time"] .
-    "<br /> Device Note : " .
-    $cikti["Module_Name"];
+	" - " .
+    $cikti["Last_Online_Time"];
 ?>
