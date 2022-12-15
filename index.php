@@ -26,15 +26,21 @@ try {
 
 echo "Device List<br />";
 
-//$sorgu = $baglanti->query("SELECT * FROM \"Module\"");
-//$cikti = $sorgu->fetch(PDO::FETCH_ASSOC);
+$sorgu = $baglanti->query("SELECT * FROM \"Module\"");
+$cikti = $sorgu->fetchAll(PDO::FETCH_ASSOC);
 
-foreach ($connec->query("SELECT * FROM \"Module\"") as $row) 
-{
-	echo "-> " .
-    $row["Device_ID"] .
-	" - " .
-    $row["Last_Online_Time"];
+foreach ($cikti as $DB) {
+
+	echo "-> ";
+	echo $cikti["Device_ID"];
+	echo " - ";
+	echo $cikti["Last_Online_Time"];
+
 }
+
+
+
+
+
 
 ?>
