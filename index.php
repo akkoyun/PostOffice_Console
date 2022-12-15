@@ -29,8 +29,12 @@ echo "Device List<br />";
 $sorgu = $baglanti->query("SELECT * FROM \"Module\"");
 $cikti = $sorgu->fetch(PDO::FETCH_ASSOC);
 
-echo "-> " .
-    $cikti["Device_ID"] .
+foreach ($cikti as $row) 
+{
+	echo "-> " .
+    $row["Device_ID"] .
 	" - " .
-    $cikti["Last_Online_Time"];
+    $row["Last_Online_Time"];
+}
+
 ?>
