@@ -26,7 +26,7 @@ try {
 
 echo "Device List";
 
-$sorgu = $baglanti->query("SELECT * FROM Module");
+$sorgu = $baglanti->query("SELECT * FROM \"Module\"");
 $cikti = $sorgu->fetch(PDO::FETCH_ASSOC);
 
 echo "Device ID : " .
